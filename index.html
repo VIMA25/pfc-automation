@@ -1,14 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PFC AUTOMATION</title>
+    <title>The Procreate Organization - AI Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-card-left {
+                padding-right: 3rem;
+                text-align: right;
+            }
+
+            .timeline-card-right {
+                padding-left: 3rem;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
-<body>
-    <h1>Welcome to PFC AUTOMATION</h1>
+
+<body class="antialiased pb-20">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 bg-teal-50 text-teal-600 rounded-xl">
+                    <i data-lucide="activity" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-900">The Procreate Organization</h1>
+                    <p class="text-lg text-slate-500 mt-1">AI & Automation Executive Roadmap</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p class="text-sm text-slate-500 font-medium">Execution Model</p>
+                    <p class="text-lg font-semibold text-slate-800 flex items-center gap-2 mt-1">
+                        <i data-lucide="users" class="w-4 h-4 text-teal-500"></i> Lean Internal Team
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p class="text-sm text-slate-500 font-medium">Security Posture</p>
+                    <p class="text-lg font-semibold text-slate-800 flex items-center gap-2 mt-1">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> Gemini (BAA Active)
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p class="text-sm text-slate-500 font-medium">Core Constraint</p>
+                    <p class="text-lg font-semibold text-slate-800 flex items-center gap-2 mt-1">
+                        <i data-lucide="lock" class="w-4 h-4 text-rose-500"></i> Legacy EMR (NextGen)
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p class="text-sm text-slate-500 font-medium">Project Timeline</p>
+                    <p class="text-lg font-semibold text-slate-800 flex items-center gap-2 mt-1">
+                        <i data-lucide="calendar" class="w-4 h-4 text-indigo-500"></i> 3 - 4 Months
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <main class="max-w-5xl mx-auto px-6 py-16 relative">
+        <h2 class="text-2xl font-bold text-center mb-16 text-slate-800">Phased Implementation & Departmental Impact</h2>
+
+        <div class="relative">
+            <!-- Central Line -->
+            <div class="timeline-line hidden md:block"></div>
+
+            <!-- Phase 1 -->
+            <div class="relative flex flex-col md:flex-row items-center mb-24 w-full">
+                <div class="md:w-1/2 w-full timeline-card-left z-10">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 ml-12 md:ml-0 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between md:flex-row-reverse mb-4">
+                            <span
+                                class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase tracking-wide">Phase
+                                1: Immediate Execution</span>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-medium flex items-center gap-1"><i
+                                        data-lucide="clock" class="w-3 h-3"></i> 1-2 Weeks</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">The HR Execution Agent</h3>
+                        <p class="text-slate-600 text-sm mb-4">Moving beyond passive knowledge bases. Deploy an active
+                            agent that analyzes employee census data against 401k rules, automatically executes
+                            enrollment outreach, identifies compliance gaps, and formats contribution updates for
+                            payroll.</p>
+
+                        <!-- Impacted Areas -->
+                        <div class="mb-5 text-left md:text-right">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Impacted
+                                Departments:</span>
+                            <div class="flex flex-wrap gap-2 md:justify-end">
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium text-teal-700">HR
+                                    (401K) / Insurance</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Compliance</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-semibold text-slate-500">Implementation Effort</span>
+                                <span class="text-xs font-bold text-green-600">Low - Medium</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-1.5">
+                                <div class="bg-green-500 h-1.5 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 md:justify-end">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Make.com</span>
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Gemini
+                                API</span>
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Google
+                                Workspace</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-green-500 text-white border-4 border-[#f8fafc] z-20">
+                    <i data-lucide="cog" class="w-4 h-4"></i>
+                </div>
+                <div class="md:w-1/2 w-full hidden md:block"></div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="relative flex flex-col md:flex-row items-center mb-24 w-full">
+                <div class="md:w-1/2 w-full hidden md:block"></div>
+                <div
+                    class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white border-4 border-[#f8fafc] z-20">
+                    <i data-lucide="megaphone" class="w-4 h-4"></i>
+                </div>
+                <div class="md:w-1/2 w-full timeline-card-right z-10">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 ml-12 md:ml-0 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wide">Phase
+                                2: Quick Wins</span>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-medium flex items-center gap-1"><i
+                                        data-lucide="clock" class="w-3 h-3"></i> 1-2 Weeks</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">The Content Engine</h3>
+                        <p class="text-slate-600 text-sm mb-4">Utilizing AI Studio and Gemini to generate localized
+                            marketing copy, patient educational content, and programmatic video creation based strictly
+                            on brand guidelines.</p>
+
+                        <!-- Impacted Areas -->
+                        <div class="mb-5">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Impacted
+                                Departments:</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Marketing</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Video
+                                    Generation</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Video
+                                    Creation</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-semibold text-slate-500">Implementation Effort</span>
+                                <span class="text-xs font-bold text-blue-600">Low</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-1.5">
+                                <div class="bg-blue-500 h-1.5 rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">AI
+                                Studio</span>
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Gemini
+                                3.1 Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="relative flex flex-col md:flex-row items-center mb-24 w-full">
+                <div class="md:w-1/2 w-full timeline-card-left z-10">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 ml-12 md:ml-0 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between md:flex-row-reverse mb-4">
+                            <span
+                                class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full uppercase tracking-wide">Phase
+                                3: Operational Shift</span>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-medium flex items-center gap-1"><i
+                                        data-lucide="clock" class="w-3 h-3"></i> 3-4 Weeks</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">The Triage Assistant</h3>
+                        <p class="text-slate-600 text-sm mb-4">Connecting secure web forms to Make.com. Gemini safely
+                            digests complex patient PHI (covered by BAA) and generates a concise "Pre-Consult Brief" for
+                            the physician. (Data is copy-pasted to NextGen).</p>
+
+                        <!-- Impacted Areas -->
+                        <div class="mb-5 text-left md:text-right">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Impacted
+                                Departments:</span>
+                            <div class="flex flex-wrap gap-2 md:justify-end">
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Scheduling
+                                    Front Desk</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">Scheduling</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">IVF
+                                    Coordination</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-semibold text-slate-500">Implementation Effort</span>
+                                <span class="text-xs font-bold text-amber-600">Medium</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-1.5">
+                                <div class="bg-amber-500 h-1.5 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 md:justify-end">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Make.com</span>
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Gemini
+                                API (BAA)</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-amber-500 text-white border-4 border-[#f8fafc] z-20">
+                    <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+                </div>
+                <div class="md:w-1/2 w-full hidden md:block"></div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="relative flex flex-col md:flex-row items-center w-full">
+                <div class="md:w-1/2 w-full hidden md:block"></div>
+                <div
+                    class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-purple-500 text-white border-4 border-[#f8fafc] z-20">
+                    <i data-lucide="users-2" class="w-4 h-4"></i>
+                </div>
+                <div class="md:w-1/2 w-full timeline-card-right z-10">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 ml-12 md:ml-0 hover:shadow-md transition-shadow ring-2 ring-purple-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full uppercase tracking-wide">Phase
+                                4: Workforce Transformation</span>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-medium flex items-center gap-1"><i
+                                        data-lucide="clock" class="w-3 h-3"></i> 2-3 Months</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">The Autonomous Biller</h3>
+                        <p class="text-slate-600 text-sm mb-4">Build an internal web app via Antigravity. The AI agent
+                            extracts unstructured NextGen data, verifies insurance rules, and auto-generates CPT/ICD-10
+                            codes.</p>
+
+                        <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 mb-4">
+                            <p class="text-sm text-purple-800 font-medium">
+                                <i data-lucide="target" class="w-4 h-4 inline-block mr-1 text-purple-600"></i>
+                                <strong>Goal:</strong> Radically reduce headcount by transitioning to agent-led
+                                execution. Requires only <strong>one human overseer</strong> for final claim approval.
+                            </p>
+                        </div>
+
+                        <!-- Impacted Areas -->
+                        <div class="mb-5">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Impacted
+                                Departments (Targeted for Reduction):</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium text-rose-600">Billing/Coding</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium text-rose-600">Insurance
+                                    Verification</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium text-rose-600">Insurance
+                                    Claims</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium text-rose-600">Financial
+                                    Counselors</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-semibold text-slate-500">Implementation Effort</span>
+                                <span class="text-xs font-bold text-purple-600">High (Vibecoding Apps)</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-1.5">
+                                <div class="bg-purple-500 h-1.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Antigravity</span>
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded border border-indigo-100">Google
+                                Cloud (GCP)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Governance Footer Section -->
+    <section class="max-w-4xl mx-auto px-6 mt-12 mb-16">
+        <div class="bg-slate-900 text-white rounded-2xl p-8 shadow-xl">
+            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-6 h-6 text-teal-400"></i> Core Governance Model
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h4 class="font-semibold text-teal-400 mb-2 flex items-center gap-2"><i data-lucide="user-check"
+                            class="w-4 h-4"></i> The "Overseer" Model</h4>
+                    <p class="text-sm text-slate-300">Agents perform 95% of the heavy lifting. Your single human
+                        overseer simply reviews exceptions and clicks "Approve."</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-teal-400 mb-2 flex items-center gap-2"><i data-lucide="database"
+                            class="w-4 h-4"></i> The EMR Moat</h4>
+                    <p class="text-sm text-slate-300">PHI is fully protected by the Google BAA, but NextGen remains
+                        physically isolated to prevent destructive API overwrites.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-teal-400 mb-2 flex items-center gap-2"><i data-lucide="zap"
+                            class="w-4 h-4"></i> Active Agents vs Passive RAG</h4>
+                    <p class="text-sm text-slate-300">We do not build chatbots. We build systems that analyze reality
+                        (e.g., employee census), make decisions, and execute workflows autonomously.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
